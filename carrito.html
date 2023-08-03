@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cerveja</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./images/favi.png" type="image/x-icon">
+</head>
+<body>
+
+        <header>
+            <div class="menu container">
+                <a href="#" class="logo"><img src="images/Rocbeer.png" alt=""></a>
+                <input type="checkbox" id="menu">
+                <label for="menu">
+                    <img src="images/menu.png" class="menu-icono">
+                </label>
+                <nav class="navbar">
+                    <ul>
+                        <li><a href="/index.html">Inicio</a></li>
+                        <li><a href="#">Servicios</a></li>
+                        <li><a href="#">Productos</a></li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <section class="cart bee container">
+            <h2>Comprate estas birritas</h2>
+            <ul class="cart-items"></ul>
+            <p>Total: <span class="cart-total">$0.00</span></p>
+            <section>
+                <table>
+                    <thead>
+                        <tr>
+                            <th id="tablehead">Producto</th>
+                            <th id="tablehead">Descripción</th>
+                            <th id="tablehead">Importe</th>
+                            <th id="tablehead">Quitar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Aquí</td>
+                            <td>verás</td>
+                            <td>productos</td>
+                            <td><img src="images/clothes.png" width="30px"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="centrar-div">
+                    <button class="button" id="btnComprar">COMPRAR</button>
+                </div>
+            </section>
+        </section>
+
+
+
+
+
+        <footer class="footer container">
+            <hr>
+            <div class="footer-txt">
+                <img src="#" alt="">
+                <div class="links">
+                    <ul>
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Servicios</a></li>
+                        <li><a href="#">Productos</a></li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+                    <div class="redes">
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                    <p>Creado por Ornella Sereno Alloa</p>
+                </div>
+            </div>
+        </footer>
+    
+        
+        <!-- Swiper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+           <!-- Script JQuery -->
+           <script src="https://code.jquery.com/jquery-3.7.0.min.js"> </script>
+        <!-- Script -->
+        <script src="./js/main.js"></script>
+        <script src="./js/check.js"></script>
+</body>
+</html>
