@@ -380,7 +380,7 @@ hr {
 h1{
     color: #727272;
 }
-.container{
+.container-form{
     text-align: center;
     display: flex;
     flex-direction: column;
