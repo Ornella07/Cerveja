@@ -1,80 +1,84 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cerveja</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
-     <!-- CSS -->
-     <link rel="stylesheet" href="css/style.css">
-     <!-- Toastify -->
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-     <!-- Favicon -->
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Toastify -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <!-- Favicon -->
     <link rel="shortcut icon" href="./images/favi.png" type="image/x-icon">
 </head>
+
 <body>
-   
-        <header>
-            <div class="menu container">
-                <a href="#" class="logo"><img src="images/Rocbeer.png" alt=""></a>
-                <input type="checkbox" id="menu">
-                <label for="menu">
-                    <img src="images/menu.png" class="menu-icono">
-                </label>
-                <nav class="navbar">
-                    <ul>
-                        <li><a href="#">Inicio</a></li>
-                        <li><a href="#bee">Productos</a></li>
-                        <li><a href="./carrito.html">Carrito</a></li>
-                        <li><a href="#">Contacto</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="modal" id="modal">
-                <div class="modal-content">
+
+    <header>
+        <div class="menu container">
+            <a href="#" class="logo"><img src="images/Rocbeer.png" alt=""></a>
+            <input type="checkbox" id="menu">
+            <label for="menu">
+                <img src="images/menu.png" class="menu-icono">
+            </label>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#bee">Productos</a></li>
+                    <li><a href="./carrito.html">Carrito</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="modal" id="modal">
+            <div class="modal-content">
                 <h2>Ingresa tu nombre de usuario</h2>
                 <input type="text" id="usernameInput">
                 <button id="loginButton">Ingresar</button>
-                </div>
             </div>
-            <div class="overlay" id="overlay"></div>
-            <div class="user-info" id="userInfo"></div>
+        </div>
+        <div class="overlay" id="overlay"></div>
+        <div class="user-info" id="userInfo"></div>
 
-            <div class="header-content container">
+        <div class="header-content container">
 
-                <div class="swiper mySwiper-1">
+            <div class="swiper mySwiper-1">
 
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <img class="slider" src="images/2.png" alt="">
-                        </div>
-                        <div class="swiper-slide">
-                            <img class="slider" src="images/3.png" alt="">
-                        </div>
-                        <div class="swiper-slide">
-                            <img class="slider" src="images/4.png" alt="">
-                        </div>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img class="slider" src="images/2.png" alt="">
                     </div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-pagination"></div>
+                    <div class="swiper-slide">
+                        <img class="slider" src="images/3.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="slider" src="images/4.png" alt="">
+                    </div>
                 </div>
-                <!-- <a href="#" class="enlace">Para más información</a> -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
             </div>
-        </header>
+            <!-- <a href="#" class="enlace">Para más información</a> -->
+        </div>
+    </header>
 
-     <!-- Contenedor Birras -->
-     <section class="bee" id="bee">        
+    <!-- Contenedor Birras -->
+    <section class="bee" id="bee">
         <div class="container-birrita">
-           
-            <div class="container-card" id="cervezas">
-                
-            </div>
-        </div>  
 
-     </section>
+            <div class="container-card" id="cervezas">
+
+            </div>
+        </div>
+
+    </section>
 
     <section class="nosotros">
         <div class="nosotros-txt container">
@@ -91,22 +95,53 @@
     <section class="bee">
         <div class="swiper mySwiper-2 container">
             <h2 class="typewriter-container" id="text-container"></h2>
-    
+
             <div class="swiper-wrapper" id="beer">
 
-            
-                
-            </div> 
-            
+
+
+            </div>
+
         </div>
     </section>
 
 
 
 
+    <!-- Flecha para volver al inicio -->
+    <div class="arrow-container">
+        <a href="#" class="arrow">&#8593;</a>
+    </div>
 
+<hr>
+    <!-- Formulario contacto -->
+    <div class="container">
+        <h1>Contacto</h1>
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" placeholder="Ingresa tu nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email"  placeholder="Ingrese su Correo" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message" rows="4" placeholder="Ingresa tu mensaje" ></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit">Enviar</button>
+            </div>
+        </form>
+    </div>
+
+    <hr>
+
+    <!-- Footer -->
     <footer class="footer container">
-        <hr>
+       
         <div class="footer-txt">
             <img src="#" alt="">
             <div class="links">
@@ -126,8 +161,8 @@
         </div>
     </footer>
 
-    
-    
+
+
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <!-- Toastify -->
@@ -137,4 +172,5 @@
     <!-- Script -->
     <script src="./js/main.js"></script>
 </body>
+
 </html>

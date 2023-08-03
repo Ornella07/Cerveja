@@ -342,6 +342,20 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+// Función para el comportamiento de la flecha al hacer clic
+document.querySelector('.arrow').addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth' // Hace que el desplazamiento sea suave
+  });
+});
+
+
+
+
+  
+
+
 
 // Carrito
 // document.addEventListener("DOMContentLoaded", () => {
