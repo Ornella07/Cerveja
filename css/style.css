@@ -380,7 +380,7 @@ hr {
 h1{
     color: #727272;
 }
-.container{
+.container-form{
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -409,13 +409,10 @@ textarea {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  background-color: transparent;
-  color: #fff;
+  
 }
-input,
-textarea:placeholder-shown{
-    font-family: "Poppins", sans-serif;
-}
+
+
 button {
   background-color:#ffe45e;
   color: #252323;
@@ -429,15 +426,31 @@ button:hover {
   background-color:#727272;
 }
 
+
+
+
+
+
+
 /* Carrito */
-.cart h2 {
-  color: red;
+.volver{
+    display: flex;
+   
+    margin: 10px 0;
+    background-color:#bebebe;
 }
-.cart p {
-  color: #bebebe;
+.volver a{
+    text-decoration: none;
+    color: #0a1128; 
+    font-size: 15px;
+    font-weight: 500;   
+    text-transform: uppercase; 
+}
+.cart h2 {
+    color: #bebebe;
 }
 
-.cart-items {
+/* .cart-items {
   list-style: none;
   padding: 0;
 }
@@ -445,11 +458,100 @@ button:hover {
   display: flex;
   justify-content: space-between;
   margin-bottom: 0.5rem;
-}
+} */
 
 .cart-total {
   font-weight: bold;
 }
+.centrar-div{
+    display: flex;
+    text-align: center;
+}
+
+.contenedor-carrito{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.carrito-comprado{
+    color: #f5c179;
+    display: none; 
+}
+.carrito-vacio{
+    color: #f5c179;
+    /* display: none; */
+}
+
+.carrito-productos{
+    display: flex;
+    flex-direction: column;
+    gap: 1;
+}
+.carrito-producto {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #aaa5a5;
+    color: #353535;
+    padding: .5rem;
+    padding-right: 1.5rem;
+    border-radius: 1rem;
+}
+.carrito-producto-imagen{
+    width: 15rem;
+    margin-top: -50px;
+    
+}
+.carrito-producto small{
+    font-size: 23px;
+}
+
+.carrito-producto-eliminar{
+    border: 0;
+    background-color: transparent;
+}
+.carrito-acciones{
+    display: flex;
+    justify-content: space-between;
+}
+.carrito-acciones-vaciar{
+    border: 0;
+    padding: 1rem; 
+    text-transform: uppercase;
+}
+.carrito-acciones-derecha{
+    display: flex;
+}
+.carrito-acciones-total{
+    display: flex;
+    padding: 1rem;
+    text-transform: uppercase;
+}
+.carrito-acciones-eliminar{
+    border: 0;
+    padding: 1rem; 
+    text-transform: uppercase;
+}
+
+.carrito-acciones-comprar{
+    border: 0;
+    padding: 1rem; 
+    text-transform: uppercase;
+}
+
+.disabled{
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
 
 /* Media */
 @media (max-width: 991px) {

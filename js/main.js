@@ -44,11 +44,12 @@ class Cerveja {
         this.descripcion = descripcion;
     }
 }
+const carrito = [];
 const cervezas = [
     {
         titulo:'Blue Moon',
         imagen:'../images/5.png',
-        precio:'$1200',
+        precio:1200,
         descripcion:'0,33cl.'
 
     },
@@ -56,106 +57,106 @@ const cervezas = [
     {
         titulo:'Franziskaner Dunkel',
         imagen:'../images/7.png',
-        precio:'$1500',
+        precio:1500,
         descripcion:'0,50cl.'
 
     },
     {
         titulo:'Franziskaner Naturtrub',
         imagen:'../images/8.png',
-        precio:'$1500',
+        precio:1500,
         descripcion:'0,50cl.'
     }
     ,
     {
         titulo:'Franziskaner sin alcohol ',
         imagen:'../images/9.png',
-        precio:'$1500',
+        precio:1500,
         descripcion:'0,50cl.'
     },
     {
         titulo:'Franziskaner Kristallklar',
         imagen:'../images/10.png',
-        precio:'$1500',
+        precio:1500,
         descripcion:'0,50cl.'
     }, 
     {
         titulo:'Chimay Triple Blanca',
         imagen:'../images/11.png',
-        precio:'$2000',
+        precio:2000,
         descripcion:'0,33cl.'
     },
     {
         titulo:'Chimay Azul',
         imagen:'../images/12.png',
-        precio:'$2000',
+        precio:2000,
         descripcion:'0,33cl.'
     },
     {
         titulo:'Chimay Roja',
         imagen:'../images/13.png',
-        precio:'$2000',
+        precio:2000,
         descripcion:'0,33cl.'
     },
 
     {
         titulo:'Ocho Reales Porter',
         imagen:'../images/17.png',
-        precio:'$1500',
+        precio:1500,
         descripcion:'0,355l'
     }
     ,
     {
         titulo:'Ocho Reales Lager clara',
         imagen:'../images/18.png',
-        precio:'$1500',
+        precio:1500,
         descripcion:'0,355l'
     }
     ,
     {
         titulo:'Ocho Reales Ale',
         imagen:'../images/19.png',
-        precio:'$1500',
+        precio:1500,
         descripcion:'0,355l'
     }
     ,
     {
         titulo:'Leffe Blonde',
         imagen:'../images/20.png',
-        precio:'$1300',
+        precio:1300,
         descripcion:' 0,33cl.'
     }
     ,
     {
         titulo:'Leffe Brune',
         imagen:'../images/21.png',
-        precio:'$1300',
+        precio:1300,
         descripcion:' 0,33cl.'
     }
     ,
     {
         titulo:'Guinness Special Export',
         imagen:'../images/22.png',
-        precio:'$1500',
+        precio:1500,
         descripcion:'0,33cl.'
     }
     ,
     {
         titulo:'Negra Modelo',
         imagen:'../images/23.png',
-        precio:'$1300',
+        precio:1300,
         descripcion:'0,355l.'
     }    ,
     {
         titulo:'Pacifico Clara',
         imagen:'../images/25.png',
-        precio:'$1250',
+        precio:1250,
         descripcion:'0,355l.'
     },
     {
         titulo:'Triple Secret des Moines ',
         imagen:'../images/26.png',
-        precio:'$1450',
+        precio:1450,
         descripcion:'0.33cl.'
     }
 
@@ -174,7 +175,7 @@ function cargaDeBirras(birras){
             <div class="producto-txt">
                 <h4>${cervezas.titulo}</h4>
                 <p>${cervezas.descripcion}</p>
-
+                <p>$${cervezas.precio}</p>
             </div>
             <button id="btn-${cervezas.titulo}" class="agregar-carrito">Agregar al carrito</button>
         </div>
@@ -185,29 +186,43 @@ function cargaDeBirras(birras){
         const agregarBtn = document.getElementById(`btn-${cervezas.titulo}`)
         agregarBtn.addEventListener('click',() => agregarAlCarrito(cervezas.titulo))
     }); 
+    actualizarBotonesAgregar();
     
 }
 cargaDeBirras(cervezas);
 
-// En el archivo "script.js"
-// function agregarAlCarrito(titulo) {
-//     const toastConfig = {
-//       text: `Se agregó "${titulo}" al carrito.`,
-//       duration: 3000,
-//       gravity: "top",
-//       backgroundColor: "#333",
-//       stopOnFocus: true,
-//       onClick: () => {
-//         Toastify({
-//             text: 'clickeaste',
-//             duration: 1500,
-//             position: 'left'
-//         }).showToastt()
-//       },
-//     };
-  
-//     Toastify(toastConfig).showToast();
-//   }
+
+
+// Función para agregar al carrito
+function agregarAlCarrito(titulo) {
+    console.log(`Estas clickeando el producto ${titulo}`)
+    const producto = cervezas.find(producto => producto.titulo === titulo);
+
+    if(carrito.some(producto => producto.titulo === titulo)){
+        const index = carrito.findIndex(producto => producto.titulo === titulo);
+        carrito[index].cantidad++;
+    }else{
+        producto.cantidad = 1;
+        carrito.push(producto);
+    }
+
+    console.log(carrito)
+}
+
+
+// let botonesAgregar = document.querySelectorAll('.agregar-carrito');
+
+console.log(botonesAgregar)
+
+function actualizarBotonesAgregar(){
+    botonesAgregar = document.querySelectorAll('.agregar-carrito');
+    
+    botonesAgregar.forEach(boton => {
+        boton.addEventListener('click', agregarAlCarrito);
+    })
+}
+
+
 
 // Carga de birras al final
     const cervejas = "./js/cervezas.json";
@@ -236,6 +251,7 @@ cargaDeBirras(cervezas);
         });
 
 
+
         
     const textToWrite = "¡Productos Relacionados!";
     const textContainer = document.getElementById("text-container");
@@ -251,45 +267,6 @@ cargaDeBirras(cervezas);
     }
 
     writeText();
-
-
-
-
-// Función para manejar el evento clic del botón
-function agregarAlCarrito(titulo) {
-    console.log(`Estas clickeando el producto ${titulo}`)
-    
-    // const nombreProducto = titulo;
-
-    // crearCarrito(nombreProducto);
-
-}
-
-
-
-
-
-
-// function cargaCarrito(crearCarrito){
-//     const carrito = JSON.parse(localStorage.getItem('carrito'));
-
-    
-// }
-        
-
- // Crear el botón dinámicamente
-//  const agregarBtn = document.createElement('button');
-//  agregarBtn.textContent = 'Agregar al carrito';
-//  agregarBtn.id = `btn-${cervezas.titulo}`;
-
-//   // Agregar el manejador de evento al botón
-//   agregarBtn.addEventListener('click', () => agregarAlCarrito(cervezas.titulo));
-
-//   // Insertar el botón en el contenedor del HTML
-//   const botonesContainer = document.getElementById('botonesContainer');
-//   botonesContainer.appendChild(agregarBtn); 
-
-
 
 
 
@@ -339,7 +316,7 @@ document.addEventListener('DOMContentLoaded', () => {
   } else {
     showModal();
   }
-});
+}); 
 
 
 // Función para el comportamiento de la flecha al hacer clic
@@ -349,37 +326,3 @@ document.querySelector('.arrow').addEventListener('click', () => {
     behavior: 'smooth' // Hace que el desplazamiento sea suave
   });
 });
-
-
-
-
-  
-
-
-
-// Carrito
-// document.addEventListener("DOMContentLoaded", () => {
-//     const buyButtons = document.querySelectorAll(".buy-btn");
-//     const cartItems = document.querySelector(".cart-items");
-//     const cartTotal = document.querySelector(".cart-total");
-  
-//     let total = 0;
-//     let cartItemsCount = 0;
-  
-//     buyButtons.forEach((button) => {
-//       button.addEventListener("click", () => {
-//         const name = button.dataset.name;
-//         const price = parseFloat(button.dataset.price);
-  
-//         total += price;
-//         cartItemsCount++;
-  
-//         const cartItem = document.createElement("li");
-//         cartItem.classList.add("cart-item");
-//         cartItem.innerHTML = `${name} - $${price.toFixed(2)}`;
-//         cartItems.appendChild(cartItem);
-  
-//         cartTotal.textContent = `$${total.toFixed(2)}`;
-//       });
-//     });
-//   });

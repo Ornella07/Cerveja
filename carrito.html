@@ -23,42 +23,58 @@
                 </label>
                 <nav class="navbar">
                     <ul>
-                        <li><a href="/index.html">Inicio</a></li>
-                        <li><a href="#">Servicios</a></li>
-                        <li><a href="#">Productos</a></li>
-                        <li><a href="#">Contacto</a></li>
+                        <li><a href="index.html">Inicio</a></li>
+                    <li><a href="index.html">Productos</a></li>
+                    <li><a href="carrito.html">Carrito</a></li>
+                    <li><a href="index.html">Contacto</a></li>
                     </ul>
                 </nav>
             </div>
         </header>
         <section class="cart bee container">
             <h2>Comprate estas birritas</h2>
-            <ul class="cart-items"></ul>
-            <p>Total: <span class="cart-total">$0.00</span></p>
-            <section>
-                <table>
-                    <thead>
-                        <tr>
-                            <th id="tablehead">Producto</th>
-                            <th id="tablehead">Descripción</th>
-                            <th id="tablehead">Importe</th>
-                            <th id="tablehead">Quitar</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Aquí</td>
-                            <td>verás</td>
-                            <td>productos</td>
-                            <td><img src="images/clothes.png" width="30px"></td>
-                        </tr>
-                    </tbody>
-                </table>
-                <div class="centrar-div">
-                    <button class="button" id="btnComprar">COMPRAR</button>
-                </div>
-            </section>
-        </section>
+            <button class="volver"><a href="index.html">Seguir Comprando</a></button>
+            <main>
+                    <div class="contenedor-carrito">
+                        <p class="carrito-vacio">Tu carrito esta vacio.</p>
+                        
+                        <div id="carrito-productos" class="carrito-productos disabled ">
+                            <div class="carrito-producto">
+                                <img class="carrito-producto-imagen" src="./images/11.png" alt="">
+                                <div class="carrito-producto-titulo">
+                                    <small>Titulo</small>
+                                    <h3>birri</h3>
+                                </div>
+                                <div class="carrito-producto-cantidad">
+                                    <small>Cantidad</small>
+                                    <p>1</p>
+                                </div>
+                                <div class="carrito-producto-precio">
+                                    <small>Precio</small>
+                                    <p>$1000</p>
+                                </div>
+                                <div class="carrito-producto-subtotal">
+                                    <small>Subtotal</small>
+                                    <p>$1000</p>
+                                </div>
+                                <button class="carrito-producto-eliminar"><i class="fa-solid fa-trash"></i></button>
+                            </div>
+                        </div>
+                        <div class="carrito-acciones disabled">
+                            <div class="carrito-acciones-izquierda">
+                                <button class="carrito-acciones-vaciar">Vaciar Carrito</button>
+                            </div>
+                            <div class="carrito-acciones-derecha">
+                                <div class="carrito-acciones-total">
+                                    <p>Total:</p>
+                                    <p id="total">$2000</p>
+                                </div>
+                                <button class="carrito-acciones-comprar">Comprar</button>
+                            </div>
+                        </div>
+                     <p class="carrito-comprado">¡Muchas Gracias Por Tu Compra!</p>
+                    </div>
+            </main>
 
 
 

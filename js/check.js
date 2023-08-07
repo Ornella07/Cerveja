@@ -1,64 +1,54 @@
-const tableBody = document.querySelector('tbody')
-const sectionProductos = document.querySelector('section')
-const btnComprar = document.querySelector('button#btnComprar')
 
-function mostrarMsgCarritoVacio() {
-    return `<div class="card-error">
-                <h3>El carrito está vacío</h3>
-                <h2>🛒</h2>
-            </div>`
+let productosEnCarrito;
+
+let productosEnCarritoLS = localStorage.getItem("productos-en-carrito");
+
+if (productosEnCarritoLS) {
+    productosEnCarrito = JSON.parse(productosEnCarritoLS);
+    actualizarNumerito();
+} else {
+    productosEnCarrito = [];
 }
 
-function activarClickQuitarDelCarrito() {
-    const botonesQuitar = document.querySelectorAll('td.boton-quitar')
-    botonesQuitar.forEach((botonQuitar)=> {
-        botonQuitar.addEventListener('click', ()=> {
-            let codigo = parseInt(botonQuitar.id)
-            let indice = carritoCervezas.findIndex((cerveza)=> cerveza.id === codigo) 
-            carritoCervezas.splice(indice, 1) 
-            armarCarrito()                   
-            guardarCarritoCervezas()        
-        })
-    })
-}
+function agregarAlCarrito(e) {
 
-function calcularTotalCarrito(carrito) {
-    let totalCarrito = carrito.length > 0 ? carrito.reduce((acc, cerveza)=> acc + cerveza.importe, 0)
-                                          : 0.00
+    Toastify({
+        text: "Producto agregado",
+        duration: 3000,
+        close: true,
+        gravity: "top", // `top` or `bottom`
+        position: "right", // `left`, `center` or `right`
+        stopOnFocus: true, // Prevents dismissing of toast on hover
+        style: {
+          background: "linear-gradient(to right, #4b33a8, #785ce9)",
+          borderRadius: "2rem",
+          textTransform: "uppercase",
+          fontSize: ".75rem"
+        },
+        offset: {
+            x: '1.5rem', // horizontal axis - can be a number or a string indicating unity. eg: '2em'
+            y: '1.5rem' // vertical axis - can be a number or a string indicating unity. eg: '2em'
+          },
+        onClick: function(){} // Callback after click
+      }).showToast();
 
-    return `<tr>
-                <td></td>
-                <td><strong>Total Carrito:</strong></td>
-                <td><strong>$ ${totalCarrito.toLocaleString()}</strong></td>
-                <td></td>
-            </tr>`
-}
+    const idBoton = e.currentTarget.id;
+    const productoAgregado = productos.find(producto => producto.id === idBoton);
 
-function armarCarrito() {
-    tableBody.innerHTML = ''
-    if (carritoCervezas.length > 0) {
-        carritoCervezas.forEach((cerveza)=> tableBody.innerHTML += listarProductosEnCarritoHTML(cerveza) )
-        activarClickQuitarDelCarrito()
-        tableBody.innerHTML += calcularTotalCarrito(carritoCervezas)
+    if(productosEnCarrito.some(producto => producto.id === idBoton)) {
+        const index = productosEnCarrito.findIndex(producto => producto.id === idBoton);
+        productosEnCarrito[index].cantidad++;
     } else {
-        sectionProductos.innerHTML = mostrarMsgCarritoVacio()
+        productoAgregado.cantidad = 1;
+        productosEnCarrito.push(productoAgregado);
     }
-}
-armarCarrito()
 
-btnComprar.addEventListener('click', ()=> {
-        Swal.fire({
-            title: '¿Confirmas la compra de los productos?',
-            icon: 'question',
-            showDenyButton: true,
-            confirmButtonText: 'CONFIRMAR',
-            denyButtonText: 'CANCELAR'
-          }).then((result) => {
-            if (result.isConfirmed) {
-                localStorage.removeItem('CarritoCervezas')
-                carritoCervezas.length = 0
-                Swal.fire('Muchas gracias por su compra!', '', 'success')
-                sectionProductos.innerHTML = mostrarMsgCarritoVacio()
-            }
-        })
-})
+    actualizarNumerito();
+
+    localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
+}
+
+function actualizarNumerito() {
+    let nuevoNumerito = productosEnCarrito.reduce((acc, producto) => acc + producto.cantidad, 0);
+    numerito.innerText = nuevoNumerito;
+}
