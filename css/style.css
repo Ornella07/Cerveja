@@ -450,15 +450,7 @@ button:hover {
     color: #bebebe;
 }
 
-/* .cart-items {
-  list-style: none;
-  padding: 0;
-}
-.cart-item {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 0.5rem;
-} */
+
 
 .cart-total {
   font-weight: bold;
@@ -485,7 +477,8 @@ button:hover {
 .carrito-productos{
     display: flex;
     flex-direction: column;
-    gap: 1;
+    margin-top:2rem;
+    gap: 1.5rem;
 }
 .carrito-producto {
     display: flex;
@@ -498,7 +491,7 @@ button:hover {
     border-radius: 1rem;
 }
 .carrito-producto-imagen{
-    width: 15rem;
+    width: 10rem;
     margin-top: -50px;
     
 }
@@ -523,6 +516,7 @@ button:hover {
     display: flex;
 }
 .carrito-acciones-total{
+    color:#f5c179;
     display: flex;
     padding: 1rem;
     text-transform: uppercase;
