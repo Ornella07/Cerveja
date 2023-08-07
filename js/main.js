@@ -1,4 +1,3 @@
-
 var swiper = new Swiper(".mySwiper-1", {
     slidesPreView: 1,
     spaceBetween: 30,
@@ -243,6 +242,7 @@ fetch(cervejas)
                     </div>
                     </div>
                 </div>
+                
                 `
             contenedorCervejas.appendChild(div);
         });
