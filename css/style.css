@@ -15,6 +15,7 @@
   border-radius: 5px;
 }
 body {
+  max-width: 100%;
   background: #0a1128;
   font-family: "Poppins", sans-serif;
 }
@@ -427,11 +428,6 @@ button:hover {
 }
 
 
-
-
-
-
-
 /* Carrito */
 .volver{
     display: flex;
@@ -516,7 +512,7 @@ button:hover {
     display: flex;
 }
 .carrito-acciones-total{
-    color:#f5c179;
+    color:#f5c179 ;
     display: flex;
     padding: 1rem;
     text-transform: uppercase;
@@ -539,21 +535,23 @@ button:hover {
 
 
 
-
-
-
-
-
-
-
-
 /* Media */
-@media (max-width: 991px) {
+@media screen and (max-width: 991px) {
+  body{
+    max-width: 100%;
+ }
   .menu {
     padding: 20px;
+    width: 90%;
   }
   .menu label {
     display: inline;
+  }
+  .menu .logo img{
+    width: 140px;
+  }
+  .menu-icono{
+    width: 16px;
   }
   .menu .navbar {
     position: absolute;
@@ -587,7 +585,9 @@ button:hover {
     margin-top: 25px;
   }
   .bee {
-    padding: 50px 30px;
+    display: flex;
+    flex-direction: row;
+    padding: 50px 0;
   }
   .producto {
     text-align: center;
@@ -606,6 +606,7 @@ button:hover {
     padding: 20px 0;
   }
   .links ul {
+    display: flex;
     flex-direction: column;
     width: 200px;
   }
@@ -619,9 +620,15 @@ button:hover {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
+
+
 }
-@media (max-width: 700px) {
+@media screen and (max-width: 720px) {
+  body{
+    max-width: 100%;
+ }
   .menu {
+    max-width: 100%;
     padding: 20px;
   }
   .menu label {
