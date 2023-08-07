@@ -1,31 +1,31 @@
 [
     {
         "titulo":"Miller Genuine Draft",
-        "imagen":"../images/24.png",
+        "imagen":"./images/24.png",
         "precio":"$1000",
         "descripcion":"0.33cl"
     } ,
     {
         "titulo":"La Goudale Blonde",
-        "imagen":"../images/14.png",
+        "imagen":"./images/14.png",
         "precio":"$2500",
         "descripcion":"0,355l"
     },
     {
         "titulo":"La Goudale IPA",
-        "imagen":"../images/15.png",
+        "imagen":"./images/15.png",
         "precio":"$2500",
         "descripcion":"0,33cl."
     },
     {
         "titulo":"La Goudale Grand Cru",
-        "imagen":"../images/16.png",
+        "imagen":"./images/16.png",
         "precio":"$2500",
         "descripcion":"0,33cl."
     },
     {
         "titulo":"Corona",
-        "imagen":"../images/6.png",
+        "imagen":"./images/6.png",
         "precio":"$1000",
         "descripcion":"0,355l."
     }

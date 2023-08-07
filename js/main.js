@@ -55,7 +55,7 @@ if (productosEnCarritoLS) {
 const cervezas = [
     {
         titulo: 'Blue Moon',
-        imagen: '../images/5.png',
+        imagen: './images/5.png',
         precio: 1200,
         descripcion: '0,33cl.'
 
@@ -63,99 +63,99 @@ const cervezas = [
 
     {
         titulo: 'Franziskaner Dunkel',
-        imagen: '../images/7.png',
+        imagen: './images/7.png',
         precio: 1500,
         descripcion: '0,50cl.'
 
     },
     {
         titulo: 'Franziskaner Naturtrub',
-        imagen: '../images/8.png',
+        imagen: './images/8.png',
         precio: 1500,
         descripcion: '0,50cl.'
     }
     ,
     {
         titulo: 'Franziskaner sin alcohol ',
-        imagen: '../images/9.png',
+        imagen: './images/9.png',
         precio: 1500,
         descripcion: '0,50cl.'
     },
     {
         titulo: 'Franziskaner Kristallklar',
-        imagen: '../images/10.png',
+        imagen: './images/10.png',
         precio: 1500,
         descripcion: '0,50cl.'
     },
     {
         titulo: 'Chimay Triple Blanca',
-        imagen: '../images/11.png',
+        imagen: './images/11.png',
         precio: 2000,
         descripcion: '0,33cl.'
     },
     {
         titulo: 'Chimay Azul',
-        imagen: '../images/12.png',
+        imagen: './images/12.png',
         precio: 2000,
         descripcion: '0,33cl.'
     },
     {
         titulo: 'Chimay Roja',
-        imagen: '../images/13.png',
+        imagen: './images/13.png',
         precio: 2000,
         descripcion: '0,33cl.'
     },
     {
         titulo: 'Ocho Reales Porter',
-        imagen: '../images/17.png',
+        imagen: './images/17.png',
         precio: 1500,
         descripcion: '0,355l'
     },
     {
         titulo: 'Ocho Reales Lager clara',
-        imagen: '../images/18.png',
+        imagen: './images/18.png',
         precio: 1500,
         descripcion: '0,355l'
     },
     {
         titulo: 'Ocho Reales Ale',
-        imagen: '../images/19.png',
+        imagen: './images/19.png',
         precio: 1500,
         descripcion: '0,355l'
     },
     {
         titulo: 'Leffe Blonde',
-        imagen: '../images/20.png',
+        imagen: './images/20.png',
         precio: 1300,
         descripcion: ' 0,33cl.'
     },
     {
         titulo: 'Leffe Brune',
-        imagen: '../images/21.png',
+        imagen: './images/21.png',
         precio: 1300,
         descripcion: ' 0,33cl.'
     },
     {
         titulo: 'Guinness Special Export',
-        imagen: '../images/22.png',
+        imagen: './images/22.png',
         precio: 1500,
         descripcion: '0,33cl.'
     },
     {
         titulo: 'Negra Modelo',
-        imagen: '../images/23.png',
+        imagen: './images/23.png',
         precio: 1300,
         descripcion: '0,355l.'
     },
     {
         titulo: 'Pacifico Clara',
-        imagen: '../images/25.png',
+        imagen: './images/25.png',
         precio: 1250,
         descripcion: '0,355l.'
     },
     {
         titulo: 'Triple Secret des Moines ',
-        imagen: '../images/26.png',
+        imagen: './images/26.png',
         precio: 1450,
         descripcion: '0.33cl.'
     }
